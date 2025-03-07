@@ -64,20 +64,28 @@ public class Demo1 {
                     return;
                 }
             }
-        } else if (pilih ==2) {
+        } else if (pilih == 2) {
             for (i =1; i<=MaxPercobaan; i++){
                 System.out.println("Login mahasiswa berhasil");
                 System.out.print("Masukan Nama: ");
                 UserMaha = InputPengguna.nextLine();
-                System.out.println("Masukan NIM: ");
-                PassMaha = InputPengguna.nextLong();
-                long validPass = 202410370110276L;
-                if (UserMaha.startsWith("Shofa Khafidin") && PassMaha == validPass ){
-                    System.out.println("Nama anda: " + UserMaha);
-                    System.out.println("Nim anda: "+PassMaha);
+                System.out.print("Masukan NIM: ");
+                if(InputPengguna.hasNextLong()) {
+                    PassMaha = InputPengguna.nextLong();
+                    InputPengguna.nextLine();
+
+                    long validPass = 202410370110276L;
+                    if (UserMaha.startsWith("Shofa Khafidin") && PassMaha == validPass) {
+                        System.out.println("Nama anda: " + UserMaha);
+                        System.out.println("Nim anda: " + PassMaha);
+                    } else {
+                        System.out.println("Kata sandi atau username salah!\nulangi lagi!\nAnda memiliki " + (MaxPercobaan - 1) + " kesempatan");
+                    }
                 }
                 else {
-                    System.out.println("Kata sandi atau username salah!\nulangi lagi!\nAnda memiliki" + (MaxPercobaan -1) + "kesempatan");
+                    System.out.println("Nim harus berupa angka!");
+                    System.out.println("ulangi lagi!\nAnda memiliki " + (MaxPercobaan - 1) + " kesempatan");
+                    InputPengguna.nextLine();
                 }
 
                 if (i == MaxPercobaan){

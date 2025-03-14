@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Bahasa Java.iml" filepath="$PROJECT_DIR$/.idea/Bahasa Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JAVA CLASS/JAVA CLASS.iml" filepath="$PROJECT_DIR$/JAVA CLASS/JAVA CLASS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Latihan Aritmatika dengan scanner/Latihan Aritmatika dengan scanner.iml" filepath="$PROJECT_DIR$/Latihan Aritmatika dengan scanner/Latihan Aritmatika dengan scanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/latihan tugas1Lagi/latihan tugas1Lagi.iml" filepath="$PROJECT_DIR$/latihan tugas1Lagi/latihan tugas1Lagi.iml" />
     </modules>

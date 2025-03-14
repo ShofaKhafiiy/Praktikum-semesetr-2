@@ -1,4 +1,4 @@
-package com.Latihan;
+package ClasMethod.Latihan;
 
 import java.util.Scanner;
 

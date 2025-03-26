@@ -9,8 +9,15 @@ public class Main {
     public static void main(String[] args) {
         Character player1 = new Character("Niam");
         Armor armor1 = new Armor("Baju Besi", 50,100 );
+        Weapon weapon1 = new Weapon ("Pedang", 100);
         player1.setArmor(armor1);
+        player1.setWeapon(weapon1);
         player1.Display();
+
+        player1.levelUp();
+        player1.Display();
+        
+
     }
 
 
@@ -22,22 +29,58 @@ class Character{
 
     private String nama;
     private int baseHealth;
+    private int baseAttack;
+    private int levelCharacter;
+    private int incrementHealth;
+    private int incrementAttck;
 
     private Armor armor;
+    private Weapon weapon;
 
 
     public Character(String nama){
         this.nama = nama;
         this.baseHealth = 100;
+        this.levelCharacter = 1;
+        this.incrementHealth = 15;
+        this.incrementAttck = 20;
+        this.baseAttack = 100;
     }
     public void Display(){
-        System.out.println("\nPlayer: "+this.nama);
-        System.out.println("Memakai Armor: "+this.armor.GetNamaArmor());
-        System.out.println("Health: "+ this.baseHealth);
+        System.out.println("====================================");
+        System.out.println("        STATUS PLAYER");
+        System.out.println("====================================");
+        System.out.println("Player: "+this.nama);
+        System.out.println("Level: " + this.levelCharacter);
+        System.out.println("Base Health: "+ this.baseHealth);
+        System.out.println("Base Attack: "+this.baseAttack);
+        System.out.println("Max Attack: "+this.MaxAttack());
+        System.out.println("Max Health: "+this.maxHealth());
+        armor.InfoArmor();
+        weapon.displayInfo();
     }
 
     public void setArmor(Armor armor){
         this.armor = armor;
+    }
+    public void setWeapon(Weapon weapon){
+        this.weapon = weapon;
+    }
+    public void levelUp(){
+        this.levelCharacter++;
+    }
+
+    public int maxHealth(){
+        if (this.armor!= null){
+            return this.baseHealth+this.levelCharacter*incrementHealth+this.armor.BonusHealth();
+        }
+        return this.baseHealth+this.levelCharacter*incrementHealth;
+    }
+    public int MaxAttack(){
+        if (this.weapon != null){
+            return this.baseAttack+this.levelCharacter*this.incrementAttck+this.weapon.getWeapon();
+        }
+        return this.baseAttack+this.levelCharacter*this.incrementAttck;
     }
 
 
@@ -46,18 +89,60 @@ class Character{
 class Armor{
 
     private String nama;
-    private int ketahanan;
-    private int addHealth;
+    private int DefArmor;
+    private int BonusHealth;
 
     public Armor(String nama, int ketahanan, int health){
 
         this.nama = nama;
-        this.ketahanan = ketahanan;
-        this.addHealth = health;
+        this.DefArmor = ketahanan;
+        this.BonusHealth = health;
+    }
+
+    public void InfoArmor(){
+        System.out.println("\n***** ARMOR INFO *****");
+        System.out.println("Nama Armor: "+this.nama);
+        System.out.println("Defend Armor: "+this.DefArmor);
+        System.out.println("Bonus Health: "+this.BonusHealth);
+        System.out.println("----------------------");
+    }
+
+    public int BonusHealth(){
+        return this.DefArmor *5 + this.BonusHealth;
     }
 
     public String GetNamaArmor(){
         return this.nama;
+    }
+
+    public void SetNamaArmor(String nama){
+
+        this.nama = nama;
+
+    }
+
+
+}
+class Weapon{
+
+    private String nama;
+    private int AttckPower;
+
+    public Weapon(String nama, int attack){
+        this.nama = nama;
+        this.AttckPower=attack;
+    }
+
+    public int getWeapon(){
+        return this.AttckPower;
+    }
+
+
+    public void displayInfo() {
+        System.out.println("***** WEAPON INFO *****");
+        System.out.println("Nama Weapon : " + this.nama);
+        System.out.println("Attack Power: " + this.AttckPower);
+        System.out.println("-----------------------");
     }
 
 

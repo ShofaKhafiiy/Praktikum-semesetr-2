@@ -3,12 +3,14 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Bahasa Java.iml" filepath="$PROJECT_DIR$/.idea/Bahasa Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Final_Public_Private/Final_Public_Private.iml" filepath="$PROJECT_DIR$/Final_Public_Private/Final_Public_Private.iml" />
       <module fileurl="file://$PROJECT_DIR$/Foreach/Foreach.iml" filepath="$PROJECT_DIR$/Foreach/Foreach.iml" />
       <module fileurl="file://$PROJECT_DIR$/Function Rekursif/Function Rekursif.iml" filepath="$PROJECT_DIR$/Function Rekursif/Function Rekursif.iml" />
       <module fileurl="file://$PROJECT_DIR$/Getter and Setter/Getter and Setter.iml" filepath="$PROJECT_DIR$/Getter and Setter/Getter and Setter.iml" />
       <module fileurl="file://$PROJECT_DIR$/JAVA CLASS/JAVA CLASS.iml" filepath="$PROJECT_DIR$/JAVA CLASS/JAVA CLASS.iml" />
       <module fileurl="file://$PROJECT_DIR$/Latihan Aritmatika dengan scanner/Latihan Aritmatika dengan scanner.iml" filepath="$PROJECT_DIR$/Latihan Aritmatika dengan scanner/Latihan Aritmatika dengan scanner.iml" />
       <module fileurl="file://$PROJECT_DIR$/Latihan Fungis method/Latihan Fungis method.iml" filepath="$PROJECT_DIR$/Latihan Fungis method/Latihan Fungis method.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PolyMorphism/PolyMorphism.iml" filepath="$PROJECT_DIR$/PolyMorphism/PolyMorphism.iml" />
       <module fileurl="file://$PROJECT_DIR$/latihan tugas1Lagi/latihan tugas1Lagi.iml" filepath="$PROJECT_DIR$/latihan tugas1Lagi/latihan tugas1Lagi.iml" />
       <module fileurl="file://$PROJECT_DIR$/private and public module/private and public module.iml" filepath="$PROJECT_DIR$/private and public module/private and public module.iml" />
     </modules>

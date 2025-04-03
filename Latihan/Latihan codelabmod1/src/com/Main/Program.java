@@ -8,6 +8,8 @@ import com.input.Input;
 
  class Program {
 
+
+
     private final String nama;
     private final int tahunLahir;
     private final char Kelamin;
@@ -40,6 +42,8 @@ class InputGender{
          if (Gender == 'l' || Gender == 'L'){
              return "Laki-Laki";
          }
+
+         
 
          else if(Gender == 'p' || Gender == 'P'){
              return "Perempuan";

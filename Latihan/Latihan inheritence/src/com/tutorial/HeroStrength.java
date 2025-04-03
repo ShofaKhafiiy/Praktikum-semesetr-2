@@ -9,7 +9,7 @@ public class HeroStrength extends Hero{
 
     HeroStrength(String nameINput, double attackInput, double healthInput, Hero refrence){
         super(nameINput,attackInput,healthInput);
-        this.armor = 10000;
+        this.armor = refrence.attackPower/2;
 
     }
 

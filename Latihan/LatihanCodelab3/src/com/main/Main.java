@@ -17,11 +17,14 @@ public class Main {
 
 
         //menampilkan display status awal
+        npc.display();
         hero.display();
         musuh.display();
 
         //hero menyerang musuh
         hero.serang(musuh);
+
+        npc.serang(musuh);
 
         //musuh menyerang balik.
         musuh.serang(hero);
